@@ -18,7 +18,7 @@ export function useAuth() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    if (email !== 'Shaadi@gmail.com' || password !== 'Shaadi@1234') {
+    if (email !== 'Shaadi@gmail.com' || password !== 'Shaadi@123') {
       setIsLoading(false);
       throw new Error('Invalid credentials');
     }
