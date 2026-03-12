@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { LogOut, Sparkles, Copy, Eraser, RotateCw, UserX, ExternalLink, Heart } from 'lucide-react';
@@ -11,6 +12,7 @@ type DashboardView = 'grid' | 'image-analysis' | 'duplicate' | 'text-removal' | 
 
 export function NewDashboard() {
     const { user, logout } = useAuth();
+    const navigate = useNavigate();
     const [activeView, setActiveView] = useState<DashboardView>('grid');
 
     const products = [
@@ -23,14 +25,14 @@ export function NewDashboard() {
             action: () => window.open('https://matchmaker-ai-xi.vercel.app/login', '_blank'),
             external: true
         },
-        {
+        /* {
             id: 'image-analysis',
             name: 'Image Analysis',
             description: 'Deep analysis of images with expert AI agents.',
             icon: Sparkles,
             color: 'from-fuchsia-500 to-purple-500',
             action: () => setActiveView('image-analysis')
-        },
+        }, */
         {
             id: 'duplicate',
             name: 'Duplicate Detector',
@@ -171,7 +173,10 @@ export function NewDashboard() {
                         <Button
                             variant="ghost"
                             size="sm"
-                            onClick={logout}
+                            onClick={() => {
+                                logout();
+                                navigate('/');
+                            }}
                             className="text-muted-foreground hover:text-destructive transition-colors duration-200"
                         >
                             <LogOut className="w-4 h-4 mr-2" />

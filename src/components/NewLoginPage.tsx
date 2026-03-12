@@ -56,7 +56,7 @@ export function NewLoginPage() {
                                 <img
                                     src="https://mediafirewall.ai/images/offer-page/logo/mfw-logo.png"
                                     alt="MediaFirewall Logo"
-                                    className="w-12 h-12 object-contain"
+                                    className="w-24 h-24 object-contain"
                                 />
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export function NewLoginPage() {
                                     <Input
                                         id="email"
                                         type="email"
-                                        placeholder="Shaadi@gmail.com"
+                                        placeholder="Enter your email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         className="pl-10 h-12 bg-white/50 dark:bg-black/50 border-gray-200 dark:border-gray-800 transition-all duration-200 rounded-xl"
@@ -91,7 +91,7 @@ export function NewLoginPage() {
                                     <Input
                                         id="password"
                                         type="password"
-                                        placeholder="••••••••"
+                                        placeholder="Enter your password"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         className="pl-10 h-12 bg-white/50 dark:bg-black/50 border-gray-200 dark:border-gray-800 transition-all duration-200 rounded-xl"
