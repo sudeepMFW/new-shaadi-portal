@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LoginPage } from '@/components/LoginPage';
+import { NewLoginPage } from '@/components/NewLoginPage';
 import { useAuth } from '@/hooks/useAuth';
 
 const Index = () => {
@@ -13,7 +13,7 @@ const Index = () => {
     }
   }, [isAuthenticated, navigate]);
 
-  return <LoginPage />;
+  return <NewLoginPage />;
 };
 
 export default Index;

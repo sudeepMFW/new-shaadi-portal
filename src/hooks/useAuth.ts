@@ -18,14 +18,14 @@ export function useAuth() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    if (email !== 'mfw@gmail.com' || password !== 'mfw@123') {
+    if (email !== 'Shaadi@gmail.com' || password !== 'Shaadi@1234') {
       setIsLoading(false);
       throw new Error('Invalid credentials');
     }
 
     const mockUser: User = {
       email,
-      name: 'MediaFirewall Admin',
+      name: 'Shaadi.com Client',
     };
 
     localStorage.setItem('user', JSON.stringify(mockUser));

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Dashboard } from '@/components/Dashboard';
-import { MainLayout } from '@/components/layout/MainLayout';
+import { NewDashboard } from '@/components/NewDashboard';
 import { useAuth } from '@/hooks/useAuth';
 
 const DashboardPage = () => {
@@ -19,9 +18,7 @@ const DashboardPage = () => {
   }
 
   return (
-    <MainLayout>
-      <Dashboard />
-    </MainLayout>
+    <NewDashboard />
   );
 };
 
