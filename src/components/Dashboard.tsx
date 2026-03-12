@@ -83,7 +83,7 @@ export function Dashboard() {
         return (
           <div className="space-y-8 animate-fade-in">
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Product Dashboard</h1>
+              <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
               <p className="text-muted-foreground mt-2">Explore our products and services</p>
             </div>
 
