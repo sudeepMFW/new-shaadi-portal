@@ -22,7 +22,7 @@ export function NewDashboard() {
             description: 'AI powered matchmaking intelligence system.',
             icon: Heart,
             color: 'from-purple-500 to-indigo-500',
-            action: () => window.open('https://matchmaker-ai-xi.vercel.app/login', '_blank'),
+            action: () => window.open('https://matchmaking.mediafirewall.ai/login', '_blank'),
             external: true,
             disabled: false
         },
